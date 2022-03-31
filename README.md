@@ -1,6 +1,7 @@
 <p align="center">
-  <img alt="PayFlow" src=".github/payflow-logo.png" width="200px">
+  <img alt="PayFlow" src="https://github.com/luizeduardo29/PayFlow/blob/main/others/Logo.png" width="220px">
 </p>
+
 
 
 
@@ -28,7 +29,7 @@
 <h2 align="center">Layout 🎨</h2>
 
    <p align="center">
-      <img alt="PayFlow" title="PayFlow" src=".github/capa.png" />
+      <img alt="PayFlow" title="PayFlow" src="https://github.com/luizeduardo29/PayFlow/blob/main/others/Layout.png" />
    </p>
 
    <p align="center">
@@ -41,7 +42,7 @@
 
 <h2 align="center">Resources and technologies 📋</h2>
 
-- [Trilha | Flutter](https://www.notion.so/NLW-Together-Conte-dos-complementares-ae22125e899549efb2d4e360b5ee5ca3) 🚀
+In it, resources such as the use of camera and gallery, Machine Leaning with MLKit, Firebase Core and SignIn, Animations and Custom Styling, among many other points, such as the use of SharedPreferences were used.
 
 ---
 
@@ -60,13 +61,7 @@
 
 ---
 
-   >Esse projeto foi desenvolvido com ❤️ na #NextLevelWeekTogether da **[Rocketseat  💜🚀](https://rocketseat.com.br/)**.<br> 
-   **[Participe da nossa Comunidade! 👋](https://discordapp.com/invite/gCRAFhc)**.<br>
----
-
-   <p align="center">
-      <img alt="NLW" title="PayFlow" src=".github/nlw.png" />
-   </p>
+  
 
 
 
