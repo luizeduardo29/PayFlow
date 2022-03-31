@@ -2,31 +2,25 @@
   <img alt="PayFlow" src=".github/payflow-logo.png" width="200px">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/rocketseat-education/nlw-06-flutter?label=stars&message=MIT&color=000000&labelColor=8257e5" alt="Stars">
-  <img src="https://img.shields.io/github/forks/rocketseat-education/nlw-06-flutter?label=forks&message=MIT&color=000000&labelColor=8257e5" alt="Forks">     
-  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=000000&labelColor=8257e5" alt="License">
 
-</p>
 
-<h2 align="center">Tópicos 📋</h2>
+<h2 align="center">Topics 📋</h2>
 
    <p>
    
-   - [Sobre 📖](#sobre-)
+   - [About 📖](#about-)
    - [Layout 🎨](#layout-)
-   - [Arquivos no Notion 📋](#arquivo-no-notion-)
-   - [Como Usar 🤔](#como-usar-)
+   - [Resources and technologies📋](#resources-and-technologies-)
+   - [How to use 🤔](#how-to-use-)
 
    </p>
 
 ---
 
-<h2 align="center">Sobre 📖</h2>
+<h2 align="center">About 📖</h2>
    
 <p>
-   O projeto PayFlow foi desenvolvido na Next Level Week Together 💜💚. Nosso evento incrível que sempre traz projetos inéditos, além da intensa rotina de estudos, muitas conexões e networking, trabalho em grupo e em comunidade. <br>
-   O PayFlow se trata de um app mobile feito em Flutter 💙 para Gerenciamento de Boletos, contendo recursos como o uso de câmera e galeria, Machine Leaning com MLKit, Firebase Core e SignIn, Animações e Estilizações Personalizadas, entre vários outros pontos, como o uso do SharedPreferences. <br>
+    The PayFlow project was developed in a Flutter marathon by Rocketseat, the project is an application where the user will register the slips he needs to pay and thus will be able to have greater control. <br>
 </p>
 
 ---
@@ -38,29 +32,29 @@
    </p>
 
    <p align="center">
-      O Layout foi desenvolvido por <a href="https://instagram.com/tiagoluchtenberg">Tiago Luchtenberg</a>, e você pode acessá-lo no Figma:
+      The Layout was developed by <a href="https://instagram.com/tiagoluchtenberg">Tiago Luchtenberg</a>, and below is the Figma link to access it:
    
    - <a href="https://www.figma.com/file/kLK7FYnWKMoN68sQXcSniu/PayFlow">Mobile</a> 📱
    </p>
 
 ---
 
-<h2 align="center">Arquivo no Notion 📋</h2>
+<h2 align="center">Resources and technologies 📋</h2>
 
 - [Trilha | Flutter](https://www.notion.so/NLW-Together-Conte-dos-complementares-ae22125e899549efb2d4e360b5ee5ca3) 🚀
 
 ---
 
-<h2 align="center">Como Usar 🤔</h2>
+<h2 align="center">How to use 🤔</h2>
 
    ```
-   - Clone esse repositório:
-   $ git clone https://github.com/rocketseat-education/nlw-06-flutter
-   - Entre no diretório:
-   $ cd nlw-06-flutter
-   - Instale as dependências:
+   - Repository clone:
+   $ git clone https://github.com/luizeduardo29/PayFlow
+   - Enter the directory:
+   $ cd PayFlow
+   - Install the dependencies:
    $ flutter pub get
-   - Inicie o app: 
+   - Start the app: 
    $ flutter run
    ```
 
