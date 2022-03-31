@@ -21,7 +21,7 @@
 <h2 align="center">About 📖</h2>
    
 <p>
-    The PayFlow project was developed in a Flutter marathon by Rocketseat, the project is an application where the user will register the slips he needs to pay and thus will be able to have greater control. <br>
+    The PayFlow project was developed in a Flutter marathon by Rocketseat, the project is an application where the user will register the slips he needs to pay and thus will be able to have greater control. In addition to what I learned and did during this marathon, I am developing functions such as deleting registered tickets, adding an icon, creating a button to log out, checking if the date is according to the calendar and a filter for each month. <br>
 </p>
 
 ---
