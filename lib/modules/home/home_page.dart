@@ -1,5 +1,7 @@
 // ignore_for_file: unnecessary_string_interpolations
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:payflow/modules/extract/extract_page.dart';
 import 'package:payflow/modules/home/home_controller.dart';
@@ -29,6 +31,15 @@ class _HomePageState extends State<HomePage> {
           color: AppColors.primary,
           child: Center(
             child: ListTile(
+              //Text with name
+              leading: Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    image: DecorationImage(
+                        image: NetworkImage(widget.user.photoURL!))),
+              ),
               title: Text.rich(
                 TextSpan(
                     text: "Olá, ",
@@ -36,21 +47,26 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       TextSpan(
                           text: "${widget.user.name}",
-                          style: TextStyles.titleBoldBackground)
+                          style: TextStyles.titleBoldBackground),
                     ]),
               ),
+              //Sub text
               subtitle: Text(
-                "Mantenha suas contas em dia",
+                "Mantenha suas contas em dia!",
                 style: TextStyles.captionShape,
               ),
-              trailing: Container(
+              trailing: SizedBox(
                 height: 48,
                 width: 48,
-                decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                        image: NetworkImage(widget.user.photoURL!))),
+                child: IconButton(
+                  onPressed: () {
+                    controller.logoutButton(context);
+                  },
+                  icon: Icon(
+                    Icons.logout,
+                    color: AppColors.background,
+                  ),
+                ),
               ),
             ),
           ),
