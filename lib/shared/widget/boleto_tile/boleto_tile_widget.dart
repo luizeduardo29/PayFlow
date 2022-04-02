@@ -2,11 +2,8 @@
 
 import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
-import 'package:payflow/modules/insert_boleto/insert_boleto_controller.dart';
 import 'package:payflow/shared/models/boleto_model.dart';
-import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
-import 'package:provider/provider.dart';
 
 class BoletoTileWidget extends StatelessWidget {
   final BoletoModel data;
@@ -71,6 +68,7 @@ class BoletoTileWidget extends StatelessWidget {
                 text: "${data.value!.toStringAsFixed(2)}",
                 style: TextStyles.trailingBold,
               ),
+              TextSpan(text: "    status = ${data.status}")
             ],
           ),
         ),

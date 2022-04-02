@@ -104,6 +104,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                       icon: FontAwesomeIcons.barcode,
                       validator: controller.validateCodigo,
                       onChanged: (value) {
+                        controller.onChange(status: 1);
                         controller.onChange(barcode: value);
                       },
                     ),

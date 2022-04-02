@@ -15,17 +15,18 @@ class InsertBoletoController {
   String? validateCodigo(String? value) =>
       value?.isEmpty ?? true ? "O código do boleto não pode ser vazio" : null;
 
-  void onChange({
-    String? name,
-    String? dueDate,
-    double? value,
-    String? barcode,
-  }) {
+  void onChange(
+      {String? name,
+      String? dueDate,
+      double? value,
+      String? barcode,
+      int? status}) {
     model = model.copyWith(
       name: name,
       dueDate: dueDate,
       value: value,
       barcode: barcode,
+      status: status,
     );
   }
 
@@ -35,6 +36,7 @@ class InsertBoletoController {
     final boletos = instance.getStringList("boletos") ?? <String>[];
     boletos.add(model.toJson());
     await instance.setStringList("boletos", boletos);
+    print(boletos);
     return;
   }
 
@@ -43,5 +45,9 @@ class InsertBoletoController {
     if (form!.validate()) {
       return saveBoleto();
     }
+  }
+
+  void statusBoleto() {
+    model.status == 1;
   }
 }

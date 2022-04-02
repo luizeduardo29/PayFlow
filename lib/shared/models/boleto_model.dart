@@ -5,25 +5,22 @@ class BoletoModel {
   final String? dueDate;
   final double? value;
   final String? barcode;
-  BoletoModel({
-    this.name,
-    this.dueDate,
-    this.value,
-    this.barcode,
-  });
+  final int? status;
+  BoletoModel({this.name, this.dueDate, this.value, this.barcode, this.status});
 
   BoletoModel copyWith({
     String? name,
     String? dueDate,
     double? value,
     String? barcode,
+    int? status,
   }) {
     return BoletoModel(
-      name: name ?? this.name,
-      dueDate: dueDate ?? this.dueDate,
-      value: value ?? this.value,
-      barcode: barcode ?? this.barcode,
-    );
+        name: name ?? this.name,
+        dueDate: dueDate ?? this.dueDate,
+        value: value ?? this.value,
+        barcode: barcode ?? this.barcode,
+        status: status ?? this.status);
   }
 
   Map<String, dynamic> toMap() {
@@ -41,17 +38,20 @@ class BoletoModel {
     if (barcode != null) {
       result.addAll({'barcode': barcode});
     }
+    if (status != null) {
+      result.addAll({'status': status});
+    }
 
     return result;
   }
 
   factory BoletoModel.fromMap(Map<String, dynamic> map) {
     return BoletoModel(
-      name: map['name'],
-      dueDate: map['dueDate'],
-      value: map['value']?.toDouble(),
-      barcode: map['barcode'],
-    );
+        name: map['name'],
+        dueDate: map['dueDate'],
+        value: map['value']?.toDouble(),
+        barcode: map['barcode'],
+        status: map['status']);
   }
 
   String toJson() => json.encode(toMap());
@@ -61,7 +61,7 @@ class BoletoModel {
 
   @override
   String toString() {
-    return 'BoletoModel(name: $name, dueDate: $dueDate, value: $value, barcode: $barcode)';
+    return 'BoletoModel(name: $name, dueDate: $dueDate, value: $value, barcode: $barcode, status $status)';
   }
 
   @override
@@ -72,11 +72,16 @@ class BoletoModel {
         other.name == name &&
         other.dueDate == dueDate &&
         other.value == value &&
-        other.barcode == barcode;
+        other.barcode == barcode &&
+        other.status == status;
   }
 
   @override
   int get hashCode {
-    return name.hashCode ^ dueDate.hashCode ^ value.hashCode ^ barcode.hashCode;
+    return name.hashCode ^
+        dueDate.hashCode ^
+        value.hashCode ^
+        barcode.hashCode ^
+        status.hashCode;
   }
 }
