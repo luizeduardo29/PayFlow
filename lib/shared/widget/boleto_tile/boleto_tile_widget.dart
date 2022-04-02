@@ -1,11 +1,19 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
+import 'package:payflow/modules/insert_boleto/insert_boleto_controller.dart';
 import 'package:payflow/shared/models/boleto_model.dart';
+import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
+import 'package:provider/provider.dart';
 
 class BoletoTileWidget extends StatelessWidget {
   final BoletoModel data;
-  const BoletoTileWidget({Key? key, required this.data}) : super(key: key);
+  const BoletoTileWidget({
+    Key? key,
+    required this.data,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +21,39 @@ class BoletoTileWidget extends StatelessWidget {
       direction: AnimatedCardDirection.right,
       child: ListTile(
         contentPadding: EdgeInsets.zero,
+        /* leading: SizedBox(
+          height: 48,
+          width: 48,
+          child: IconButton(
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                        title: Text("Boleto está pago?"),
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text("Não"),
+                            textColor: AppColors.primary,
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                          FlatButton(
+                            child: Text("Sim"),
+                            textColor: AppColors.primary,
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          )
+                        ],
+                      ));
+            },
+            icon: Icon(
+              Icons.edit,
+              color: AppColors.primary,
+            ),
+          ),
+        ), */
         title: Text(
           data.name!,
           style: TextStyles.titleListTile,
@@ -21,16 +62,19 @@ class BoletoTileWidget extends StatelessWidget {
           "Vence em ${data.dueDate}",
           style: TextStyles.captionBody,
         ),
-        trailing: Text.rich(TextSpan(
-          text: "R\$ ",
-          style: TextStyles.trailingRegular,
-          children: [
-            TextSpan(
-              text: "${data.value!.toStringAsFixed(2)}",
-              style: TextStyles.trailingBold,
-            ),
-          ],
-        )),
+        trailing: Text.rich(
+          TextSpan(
+            text: "R\$ ",
+            style: TextStyles.trailingRegular,
+            children: [
+              TextSpan(
+                text: "${data.value!.toStringAsFixed(2)}",
+                style: TextStyles.trailingBold,
+              ),
+            ],
+          ),
+        ),
+        onTap: () {},
       ),
     );
   }

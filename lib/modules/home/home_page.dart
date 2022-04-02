@@ -1,7 +1,5 @@
 // ignore_for_file: unnecessary_string_interpolations
 
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:payflow/modules/extract/extract_page.dart';
 import 'package:payflow/modules/home/home_controller.dart';
